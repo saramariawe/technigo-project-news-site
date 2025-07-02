@@ -1,4 +1,118 @@
 html {
-  background: #0025ff;
-  color: #fff;
+  background: #f9f9f9;
+  color: #000;
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 4;
+}
+.meny-one {
+  display: flex;
+  justify-content: space-between;
+  background: #5b89b3;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(244, 235, 252);
+}
+.dropbtn {
+  background-color: white;
+  color: #4c3f36;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+}
+.meny-two {
+  position: relative;
+  display: inline-block;
+}
+.dropdownmeny {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdownmeny a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownmeny a:hover {
+  background-color: #f1f1f1;
+}
+.meny-two:hover .dropdownmeny {
+  display: block;
+}
+.meny-two:hover .dropbtn {
+  background-color: #5b89b3;
+  color: #f1f1f1;
+}
+.header-img {
+  width: auto;
+  height: auto;
+  background: #d8d7d3;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  padding: 5px;
+}
+.header-img > img {
+  width: 100%;
+  max-width: 1064px;
+  height: auto;
+}
+.big-news {
+  background-color: #5b89b3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 0px 5px 0px 5px;
+}
+.news-head {
+  display: flex;
+  justify-content: center;
+}
+
+.small-news {
+  background-color: #4c3f36;
+  margin: 15px;
+  gap: 10px;
+  padding: 10px 5px 0px 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Smartphone*/
+@media (max-width: 667px) {
+  .small-news {
+    display: flex;
+    flex-direction: column;
+  }
+  h4 {
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 668px) and (max-width: 1064px) {
+  .small-news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1065px) {
+  .small-news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
